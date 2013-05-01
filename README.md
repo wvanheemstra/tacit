@@ -17,4 +17,4 @@ Understood or implied without being stated.
 Documentation is kept in its own repository.
 
 *See [doc readme] [1] in the docs folder.*
-[1]: ../../../master/docs/README.md "doc readme"
+[1]: ../../../docs/blob/master/README.md "doc readme"
