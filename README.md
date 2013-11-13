@@ -11,7 +11,7 @@ Adjective
 
 Understood or implied without being stated.
 
-![Image](../../../master/images/system_overview.png?raw=true)
+![Image](../master/images/system_overview.png?raw=true)
 
 ##Documentation
 Documentation is kept in its own repository.
