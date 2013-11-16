@@ -1,5 +1,5 @@
 #tacit/README.md
-====
+=
 
 The system called Tacit.
 
