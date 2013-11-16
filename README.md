@@ -15,7 +15,7 @@ Understood or implied without being stated.
 ##Wiki
 Wiki is kept here.
 *See [wiki] [1].*
-[1]: ../../wiki
+[1]: ../../wiki/Tacit
 
 ##Documentation
 Documentation is kept in its own repository.
