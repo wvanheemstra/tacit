@@ -1,7 +1,7 @@
 var should = require('chai').should(),
-    tacit-helloworld = require('../index'),
-    escape = tacit-helloworld.escape,
-    unescape = tacit-helloworld.unescape;
+    helloworld = require('../index'),
+    escape = helloworld.escape,
+    unescape = helloworld.unescape;
 
 describe('#escape', function() {
   it('converts & into &amp;', function() {

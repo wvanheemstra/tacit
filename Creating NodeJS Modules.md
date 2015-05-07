@@ -137,9 +137,9 @@ Continuing on, let’s create a test directory to hold our tests. As our primary
 Content of tacit/tacit_modules/tacit-helloworld/test/index.js:
 
 var should = require('chai').should(),
-    scapegoat = require('../index'),
-    escape = scapegoat.escape,
-    unescape = scapegoat.unescape;
+    helloworld = require('../index'),
+    escape = helloworld.escape,
+    unescape = helloworld.unescape;
 
 describe('#escape', function() {
   it('converts & into &amp;', function() {
