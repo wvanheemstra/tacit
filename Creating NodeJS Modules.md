@@ -242,4 +242,37 @@ The result will be like so:
 
   10 passing (15ms)
 
-  
+To improve upon this, we can now tell npm how to run our tests by simply adjusting the scripts:test section of our package.json file.  
+
+"scripts": {
+  "test": "make test"
+},
+
+After doing so, we can then run the following command to run our tests.
+
+npm test
+
+The output should look something like the following.
+
+> tacit-helloworld@1.0.0 test /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld
+> make test
+
+./node_modules/.bin/mocha --reporter spec
+
+
+  #escape
+    ✓ converts & into &amp;
+    ✓ converts " into &quot;
+    ✓ converts ' into &#39;
+    ✓ converts < into &lt;
+    ✓ converts > into &gt;
+
+  #unescape
+    ✓ converts &amp; into &
+    ✓ converts &quot; into "
+    ✓ converts &#39; into '
+    ✓ converts &lt; into <
+    ✓ converts &gt; into >
+
+
+  10 passing (14ms)

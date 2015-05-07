@@ -4,7 +4,7 @@
   "description": "example of a module",
   "main": "index.js",
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
