@@ -276,3 +276,10 @@ The output should look something like the following.
 
 
   10 passing (14ms)
+
+Great, the module is complete. Prior to publishing to npm, let’s first ensure that any changes have been committed to git and that everything has been pushed up to Github. It is also a good idea to create a version tag as well. Here’s how to do just that.
+
+git tag 0.1.0
+git push origin master --tags
+
+========= Publishing to NPM ==========
