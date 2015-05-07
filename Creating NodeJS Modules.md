@@ -57,7 +57,7 @@ name: (tacit-helloworld) tacit-helloworld
 version: (1.0.0) 0.1.0
 description: example of a module
 entry point: (index.js) index.js
-test command: grunt nodeunit
+test command: make test
 git repository: https://github.com/wvanheemstra/tacit.git
 keywords: tacit example
 license: (ISC) ISC
@@ -70,7 +70,7 @@ About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-hellow
   "description": "example of a module",
   "main": "index.js",
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
