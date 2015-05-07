@@ -124,11 +124,27 @@ module.exports = {
     return String(html)
       .replace(/&amp;/g, '&')
       .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, ''')
+      .replace(/&#39;/g, "'")
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>');
   }
 };
+
+Note the use of module.exports, which we discussed previously, and is needed to make code available for use by other modules.
+Further, as our module is not reliant on any other modules, we did not need to require anything.
+
+Next, we’ll surely want to write some tests. Perhaps it would have been preferable to write them first. Regardless, I prefer to use the Mocha and Chai frameworks, but you can use whatever you like. These can be installed and persisted to the package.json file with the following commands.
+Note that they are added to the ‘devDependencies’ section, as they are only required during development and not at runtime.
+
+Type the following whilst still inside the tacit-helloworld directory where the package.json file resides:
+
+npm install mocha --save-dev
+npm install chai --save-dev
+
+The above commands will also create a node_modules folder in your project directory containing those dependencies. Following best practices, we’ll want to keep the node_modules folder out of the git repository.
+We can do that by adding a .gitignore file to our project root, with the following contents.
+
+node_modules
 
 ========= Creating a Test ==========
 
@@ -150,8 +166,8 @@ describe('#escape', function() {
     escape('"').should.equal('&quot;');
   });
 
-  it('converts ' into &#39;', function() {
-    escape(''').should.equal('&#39;');
+  it("converts ' into &#39;", function() {
+    escape("'").should.equal('&#39;');
   });
 
   it('converts < into &lt;', function() {
@@ -172,8 +188,8 @@ describe('#unescape', function() {
     unescape('&quot;').should.equal('"');
   });
 
-  it('converts &#39; into '', function() {
-    unescape('&#39;').should.equal(''');
+  it("converts &#39; into '", function() {
+    unescape('&#39;').should.equal("'");
   });
 
   it('converts &lt; into <', function() {
@@ -202,4 +218,28 @@ Note that the indentation after the test target must be a tab and not spaces.
 
 After doing so, we can then execute the tests by entering following command:
 
-make test
+sudo make test
+
+The result will be like so:
+
+./node_modules/.bin/mocha --reporter spec
+
+
+  #escape
+    ✓ converts & into &amp;
+    ✓ converts " into &quot;
+    ✓ converts ' into &#39;
+    ✓ converts < into &lt;
+    ✓ converts > into &gt;
+
+  #unescape
+    ✓ converts &amp; into &
+    ✓ converts &quot; into "
+    ✓ converts &#39; into '
+    ✓ converts &lt; into <
+    ✓ converts &gt; into >
+
+
+  10 passing (15ms)
+
+  

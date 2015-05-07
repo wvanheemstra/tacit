@@ -12,8 +12,8 @@ describe('#escape', function() {
     escape('"').should.equal('&quot;');
   });
 
-  it('converts ' into &#39;', function() {
-    escape(''').should.equal('&#39;');
+  it("converts ' into &#39;", function() {
+    escape("'").should.equal('&#39;');
   });
 
   it('converts < into &lt;', function() {
@@ -34,8 +34,8 @@ describe('#unescape', function() {
     unescape('&quot;').should.equal('"');
   });
 
-  it('converts &#39; into '', function() {
-    unescape('&#39;').should.equal(''');
+  it("converts &#39; into '", function() {
+    unescape('&#39;').should.equal("'");
   });
 
   it('converts &lt; into <', function() {
