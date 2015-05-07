@@ -54,3 +54,36 @@ version: (1.0.0) 1.0.0
 description: example of a module
 entry point: (index.js) index.js
 test command: grunt nodeunit
+git repository: https://github.com/wvanheemstra/tacit.git
+keywords: tacit example
+license: (ISC) ISC
+
+About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld/package.json:
+
+{
+  "name": "tacit-helloworld",
+  "version": "1.0.0",
+  "description": "example of a module",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wvanheemstra/tacit.git"
+  },
+  "keywords": [
+    "tacit",
+    "example"
+  ],
+  "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvanheemstra/tacit/issues"
+  },
+  "homepage": "https://github.com/wvanheemstra/tacit"
+}
+
+Is this ok? (yes) yes
+
+Now a package.json file will have been written to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld/
