@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/wvanheemstra/tacit/issues"
   },
-  "homepage": "https://github.com/wvanheemstra/tacit"
+  "homepage": "https://github.com/wvanheemstra/tacit",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  }
 }
