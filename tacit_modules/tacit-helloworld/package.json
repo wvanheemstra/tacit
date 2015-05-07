@@ -1,0 +1,23 @@
+{
+  "name": "tacit-helloworld",
+  "version": "1.0.0",
+  "description": "example of a module",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wvanheemstra/tacit.git"
+  },
+  "keywords": [
+    "tacit",
+    "example"
+  ],
+  "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvanheemstra/tacit/issues"
+  },
+  "homepage": "https://github.com/wvanheemstra/tacit"
+}
