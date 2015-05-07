@@ -15,7 +15,10 @@
     "example"
   ],
   "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
-  "license": "ISC",
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/wvanheemstra/tacit/blob/master/tacit_modules/tacit-helloworld/LICENSE-MIT"
+  }],
   "bugs": {
     "url": "https://github.com/wvanheemstra/tacit/issues"
   },
