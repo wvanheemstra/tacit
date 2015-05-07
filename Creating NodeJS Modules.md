@@ -6,6 +6,8 @@ Requirements:
 - Have NodeJS installed on your computer (default at /usr/local/bin). See http://coolestguidesontheplanet.com/installing-node-js-osx-10-9-mavericks/
 - Make sure you have the latest version and /usr/local/bin is in your $PATH. To upgrade, run: [sudo] npm install npm -g
 
+========= Creating a NPM Account ==========
+
 Configure npm
 
 Type the following:
@@ -29,6 +31,8 @@ We will store the modules for tacit within the tacit repository on github, as fo
 
 tacit/tacit_modules/
 
+========= Creating a Package File ==========
+
 The first module (as an example) we will call "tacit-helloworld"
 
 Change directory to go inside tacit/tacit_modules/tacit-helloworld
@@ -50,7 +54,7 @@ save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
 name: (tacit-helloworld) tacit-helloworld
-version: (1.0.0) 1.0.0
+version: (1.0.0) 0.1.0
 description: example of a module
 entry point: (index.js) index.js
 test command: grunt nodeunit
@@ -62,7 +66,7 @@ About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-hellow
 
 {
   "name": "tacit-helloworld",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "example of a module",
   "main": "index.js",
   "scripts": {
@@ -87,6 +91,8 @@ About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-hellow
 Is this ok? (yes) yes
 
 Now a package.json file will have been written to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld/
+
+========= Creating a Module ==========
 
 Now we can actually get on to the business of writing code. Create an index.js file to hold the primary module code. It’ll look something like the following.
 
@@ -123,3 +129,77 @@ module.exports = {
       .replace(/&gt;/g, '>');
   }
 };
+
+========= Creating a Test ==========
+
+Continuing on, let’s create a test directory to hold our tests. As our primary module file is called index.js, within the test directory I will create a file by the same name – a simple convention. Mocha will by default run all tests in this directory. Our test should look something like the following.
+
+Content of tacit/tacit_modules/tacit-helloworld/test/index.js:
+
+var should = require('chai').should(),
+    scapegoat = require('../index'),
+    escape = scapegoat.escape,
+    unescape = scapegoat.unescape;
+
+describe('#escape', function() {
+  it('converts & into &amp;', function() {
+    escape('&').should.equal('&amp;');
+  });
+
+  it('converts " into &quot;', function() {
+    escape('"').should.equal('&quot;');
+  });
+
+  it('converts ' into &#39;', function() {
+    escape(''').should.equal('&#39;');
+  });
+
+  it('converts < into &lt;', function() {
+    escape('<').should.equal('&lt;');
+  });
+
+  it('converts > into &gt;', function() {
+    escape('>').should.equal('&gt;');
+  });
+});
+
+describe('#unescape', function() {
+  it('converts &amp; into &', function() {
+    unescape('&amp;').should.equal('&');
+  });
+
+  it('converts &quot; into "', function() {
+    unescape('&quot;').should.equal('"');
+  });
+
+  it('converts &#39; into '', function() {
+    unescape('&#39;').should.equal(''');
+  });
+
+  it('converts &lt; into <', function() {
+    unescape('&lt;').should.equal('<');
+  });
+
+  it('converts &gt; into >', function() {
+    unescape('&gt;').should.equal('>');
+  });
+});
+
+Note that I am using the should syntax provided by the Chai framework. Also note the use of require to pull in our module code into the test.
+
+========= Running a Test ==========
+
+But how do we actually run the tests? Following the Mocha docs and to keep things simple, we’ll add a Makefile to the root of the project with an associated test target. Note that most projects seem to be using Grunt rather than Make these days. Regardless, our file should contain the following.
+
+Content of /tacit/tacit_modules/tacit-helloworld/Makefile:
+
+test:
+  ./node_modules/.bin/mocha --reporter spec
+
+ .PHONY: test
+
+Note that the indentation after the test target must be a tab and not spaces.
+
+After doing so, we can then execute the tests by entering following command:
+
+make test
