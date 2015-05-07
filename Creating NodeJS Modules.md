@@ -60,7 +60,7 @@ entry point: (index.js) index.js
 test command: make test
 git repository: https://github.com/wvanheemstra/tacit.git
 keywords: tacit example
-license: (ISC) ISC
+license: (ISC) MIT
 
 About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld/package.json:
 
@@ -81,7 +81,7 @@ About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-hellow
     "example"
   ],
   "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/wvanheemstra/tacit/issues"
   },
