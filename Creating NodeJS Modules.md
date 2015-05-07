@@ -194,7 +194,7 @@ But how do we actually run the tests? Following the Mocha docs and to keep thing
 Content of /tacit/tacit_modules/tacit-helloworld/Makefile:
 
 test:
-  ./node_modules/.bin/mocha --reporter spec
+	./node_modules/.bin/mocha --reporter spec
 
  .PHONY: test
 
