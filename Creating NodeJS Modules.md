@@ -307,4 +307,37 @@ Inside tacit there will be a file .gitmodules with the following content:
 	path = tacit-helloworld
 	url = git://github.com/wvanheemstra/tacit-helloworld.git
 
+It is also a good idea to create a version tag as well. Here’s how to do just that.
+git tag 0.1.0
+git push origin master --tags
+
 ========= Publishing to NPM ==========
+
+Note that for whatever reason if you decide not to publish your module on npm, the npm package format provides value in itself in both portability and ease of installation. For example, you can install packages directly from Github, and even specify a tag, sha, or branch if you want.
+
+npm install git://github.com/wvanheemstra/tacit-helloworld.git
+npm install git://github.com/wvanheemstra/tacit-helloworld.git#0.1.0
+
+The reply will be:
+
+tacit-helloworld@1.0.0 ../../node_modules/tacit-helloworld
+
+========= Verifying the publishing to NPM ==========
+
+Verify that the package installs properly. From your package root directory (tacit-helloworld), enter the following to install your package globally.
+
+sudo npm install . -g
+
+The response will be like this:
+
+Password:
+npm WARN unmet dependency /usr/local/lib/node_modules/hem/node_modules/karma/node_modules/http-proxy requires colors@'0.x.x' but will load
+npm WARN unmet dependency /usr/local/lib/node_modules/hem/node_modules/karma/node_modules/colors,
+npm WARN unmet dependency which is version 0.6.0-1
+npm WARN unmet dependency /usr/local/lib/node_modules/npm/node_modules/couch-login requires request@'~2.9.202' but will load
+npm WARN unmet dependency /usr/local/lib/node_modules/npm/node_modules/request,
+npm WARN unmet dependency which is version 2.53.0
+npm WARN unmet dependency /usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data requires semver@'2 || 3' but will load
+npm WARN unmet dependency /usr/local/lib/node_modules/npm/node_modules/semver,
+npm WARN unmet dependency which is version 4.3.1
+tacit-helloworld@1.0.0 /usr/local/lib/node_modules/tacit-helloworld
