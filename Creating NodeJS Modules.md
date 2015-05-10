@@ -290,4 +290,10 @@ git submodule add git://github.com/wvanheemstra/tacit-helloworld.git tacit-hello
 
 Now you should see a directory ('tacit-helloworld') been created inside tacit. It has its own .git folder, so it can be referenced like any other repository.
 
+Inside tacit there will be a file .gitmodules with the following content:
+
+[submodule "tacit-helloworld"]
+	path = tacit-helloworld
+	url = git://github.com/wvanheemstra/tacit-helloworld.git
+
 ========= Publishing to NPM ==========
