@@ -282,4 +282,12 @@ Great, the module is complete. Prior to publishing to npm, let’s first ensure 
 git tag 0.1.0
 git push origin master --tags
 
+========= Create a Submodule on Git ==========
+
+Make tacit-helloworld a submodule of tacit, by going into the tacit repository and typing the following:
+
+git submodule add git://github.com/wvanheemstra/tacit-helloworld.git tacit-helloworld
+
+Now you should see a directory ('tacit-helloworld') been created inside tacit. It has its own .git folder, so it can be referenced like any other repository.
+
 ========= Publishing to NPM ==========
