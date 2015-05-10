@@ -58,11 +58,11 @@ version: (1.0.0) 0.1.0
 description: example of a module
 entry point: (index.js) index.js
 test command: make test
-git repository: https://github.com/wvanheemstra/tacit.git
+git repository: https://github.com/wvanheemstra/tacit-helloworld.git
 keywords: tacit example
 license: (ISC) MIT
 
-About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld/package.json:
+About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
 
 {
   "name": "tacit-helloworld",
@@ -74,7 +74,7 @@ About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-hellow
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wvanheemstra/tacit.git"
+    "url": "https://github.com/wvanheemstra/tacit-helloworld.git"
   },
   "keywords": [
     "tacit",
@@ -83,9 +83,9 @@ About to write to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-hellow
   "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wvanheemstra/tacit/issues"
+    "url": "https://github.com/wvanheemstra/tacit-helloworld/issues"
   },
-  "homepage": "https://github.com/wvanheemstra/tacit"
+  "homepage": "https://github.com/wvanheemstra/tacit-helloworld"
 }
 
 Is this ok? (yes) yes
@@ -254,7 +254,7 @@ npm test
 
 The output should look something like the following.
 
-> tacit-helloworld@1.0.0 test /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld
+> tacit-helloworld@1.0.0 test /Users/wvanheemstra/Sites/tacit-helloworld.git
 > make test
 
 ./node_modules/.bin/mocha --reporter spec
