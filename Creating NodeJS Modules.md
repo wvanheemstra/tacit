@@ -288,7 +288,18 @@ Make tacit-helloworld a submodule of tacit, by going into the tacit repository a
 
 git submodule add git://github.com/wvanheemstra/tacit-helloworld.git tacit-helloworld
 
-Now you should see a directory ('tacit-helloworld') been created inside tacit. It has its own .git folder, so it can be referenced like any other repository.
+The outcome will be as follows:
+
+Cloning into 'tacit'...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 14 (delta 2), reused 11 (delta 2), pack-reused 0
+Receiving objects: 100% (14/14), done.
+Resolving deltas: 100% (2/2), done.
+
+Now you should see a directory ('tacit-helloworld') been created inside tacit. It has its own .git folder, so it can be referenced like any other repository:
+
+git://github.com/wvanheemstra/tacit/tacit-helloworld.git
 
 Inside tacit there will be a file .gitmodules with the following content:
 
