@@ -27,15 +27,15 @@ Username: wvanheemstra
 Password: ********
 Email: (this IS public) willem@vanheemstrasystems.com
 
-We will store the modules for tacit within the tacit repository on github, as follows:
+We will store the modules for tacit within the its own repository on github, as follows:
 
-tacit/tacit_modules/
+tacit-helloworld
 
 ========= Creating a Package File ==========
 
 The first module (as an example) we will call "tacit-helloworld"
 
-Change directory to go inside tacit/tacit_modules/tacit-helloworld
+Change directory to go inside tacit-helloworld
 
 Then type:
 
@@ -90,7 +90,7 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
 
 Is this ok? (yes) yes
 
-Now a package.json file will have been written to /Users/wvanheemstra/Sites/tacit.git/tacit_modules/tacit-helloworld/
+Now a package.json file will have been written to /Users/wvanheemstra/Sites/tacit-helloworld/
 
 ========= Creating a Module ==========
 
@@ -150,7 +150,7 @@ node_modules
 
 Continuing on, let’s create a test directory to hold our tests. As our primary module file is called index.js, within the test directory I will create a file by the same name – a simple convention. Mocha will by default run all tests in this directory. Our test should look something like the following.
 
-Content of tacit/tacit_modules/tacit-helloworld/test/index.js:
+Content of tacit-helloworld/test/index.js:
 
 var should = require('chai').should(),
     helloworld = require('../index'),
@@ -207,7 +207,7 @@ Note that I am using the should syntax provided by the Chai framework. Also note
 
 But how do we actually run the tests? Following the Mocha docs and to keep things simple, we’ll add a Makefile to the root of the project with an associated test target. Note that most projects seem to be using Grunt rather than Make these days. Regardless, our file should contain the following.
 
-Content of /tacit/tacit_modules/tacit-helloworld/Makefile:
+Content of /tacit-helloworld/Makefile:
 
 test:
 	./node_modules/.bin/mocha --reporter spec
