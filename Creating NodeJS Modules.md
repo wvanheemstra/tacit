@@ -33,7 +33,7 @@ Username: wvanheemstra
 Password: ********
 Email: (this IS public) willem@vanheemstrasystems.com
 
-We will store the modules for tacit within the its own repository on github, as follows:
+We will store the modules for tacit within its own repository on github, as follows:
 
 tacit-helloworld
 
@@ -60,7 +60,7 @@ save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
 name: (tacit-helloworld) tacit-helloworld
-version: (1.0.0) 0.1.0
+version: (1.0.0) 1.0.0
 description: example of a module
 entry point: (index.js) index.js
 test command: make test
@@ -72,7 +72,7 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
 
 {
   "name": "tacit-helloworld",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "example of a module",
   "main": "index.js",
   "scripts": {
@@ -289,7 +289,7 @@ The output should look something like the following.
 
 Great, the module is complete. Prior to publishing to npm, let’s first ensure that any changes have been committed to git and that everything has been pushed up to Github. It is also a good idea to create a version tag as well. Here’s how to do just that.
 
-git tag 0.1.0
+git tag 1.0.0
 git push origin master --tags
 
 ========= Create a Submodule on Git ==========
@@ -318,7 +318,7 @@ Inside tacit there will be a file .gitmodules with the following content:
 	url = git://github.com/wvanheemstra/tacit-helloworld.git
 
 It is also a good idea to create a version tag as well. Here’s how to do just that.
-git tag 0.1.0
+git tag 1.0.0
 git push origin master --tags
 
 ========= Publishing to NPM ==========
@@ -326,7 +326,7 @@ git push origin master --tags
 Note that for whatever reason if you decide not to publish your module on npm, the npm package format provides value in itself in both portability and ease of installation. For example, you can install packages directly from Github, and even specify a tag, sha, or branch if you want.
 
 npm install git://github.com/wvanheemstra/tacit-helloworld.git
-npm install git://github.com/wvanheemstra/tacit-helloworld.git#0.1.0
+npm install git://github.com/wvanheemstra/tacit-helloworld.git#1.0.0
 
 The reply will be:
 
