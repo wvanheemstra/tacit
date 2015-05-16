@@ -80,7 +80,7 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wvanheemstra/tacit-helloworld.git"
+    "url": "git+https://github.com/wvanheemstra/tacit-helloworld.git"
   },
   "keywords": [
     "tacit",
