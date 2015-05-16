@@ -4,6 +4,12 @@ See also https://quickleft.com/blog/creating-and-publishing-a-node-js-module/
 
 Requirements:
 - Have NodeJS installed on your computer (default at /usr/local/bin). See http://coolestguidesontheplanet.com/installing-node-js-osx-10-9-mavericks/
+
+The default installation directories are:
+
+/usr/local/bin/node for node
+/usr/local/bin/npm for nmp
+
 - Make sure you have the latest version and /usr/local/bin is in your $PATH. To upgrade, run: [sudo] npm install npm -g
 
 ========= Creating a NPM Account ==========
@@ -81,7 +87,10 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
     "example"
   ],
   "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
-  "license": "MIT",
+  "license": [{
+    "type": "MIT",
+    "url": "https://github.com/wvanheemstra/tacit-helloworld/blob/master/LICENSE-MIT"
+  }],
   "bugs": {
     "url": "https://github.com/wvanheemstra/tacit-helloworld/issues"
   },
@@ -341,3 +350,34 @@ npm WARN unmet dependency /usr/local/lib/node_modules/npm/node_modules/read-pack
 npm WARN unmet dependency /usr/local/lib/node_modules/npm/node_modules/semver,
 npm WARN unmet dependency which is version 4.3.1
 tacit-helloworld@1.0.0 /usr/local/lib/node_modules/tacit-helloworld
+
+________________________
+TIP: If there seems to be a problem with one or more modules, try updating the module (e.g. colors):
+
+sudo npm -g update colors
+
+or update all modules:
+
+sudo npm -g update
+
+Note: If you are seeing “npm: command not found” problem, it’s a permission issue and you need to run this to recursively change the owner of the files in your /usr/local folder to the current user:
+
+sudo chown -R $USER /usr/local
+________________________
+
+Check to see if it exists.
+
+npm ls -g
+
+The response will be something like:
+
+└── tacit-helloworld@1.0.0
+
+To go one step further, switch to another directory, open the node-repl, require your module and try it out.
+
+node
+  > var escape = require('tacit-helloworld').escape;
+  [Function]
+  > escape('<h1>Hello World!</h1>');
+  '&lt;h1&gt;Hello World!&lt;/h1&gt;'
+  >
