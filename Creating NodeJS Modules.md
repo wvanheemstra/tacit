@@ -391,6 +391,8 @@ The prompt will return with:
 
 + tacit-helloworld@1.0.0
 
+`npm publish` is not just for the initial publish, but should be used every time you want to push a new version.
+
 Afterwards, you’ll be able to install your package directly by name rather than having to point at the Github url.
 
 npm install tacit-helloworld
