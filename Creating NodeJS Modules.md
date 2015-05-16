@@ -87,7 +87,8 @@ About to write to /Users/wvanheemstra/Sites/tacit-helloworld/package.json:
     "example"
   ],
   "author": "Willem van Heemstra <willem@vanheemstrasystems.com> (http://vanheemstrasystems.com)",
-  "license": [{
+  "license": "MIT",
+  "licenses": [{
     "type": "MIT",
     "url": "https://github.com/wvanheemstra/tacit-helloworld/blob/master/LICENSE-MIT"
   }],
