@@ -392,3 +392,7 @@ The prompt will return with:
 + tacit-helloworld@1.0.0
 
 Afterwards, you’ll be able to install your package directly by name rather than having to point at the Github url.
+
+npm install tacit-helloworld
+
+Lastly, go find your module on the http://npmjs.org website and share it with friends.
