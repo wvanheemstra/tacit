@@ -382,3 +382,13 @@ node
   > escape('<h1>Hello World!</h1>');
   '&lt;h1&gt;Hello World!&lt;/h1&gt;'
   >
+
+Hopefully everything worked as expected and you can now move on to the publishing step. All of the meta information is contained in the package.json file. And remember from earlier that we have already registered on npm, with the npm adduser command. With that, the actual publishing part is really easy.
+
+npm publish
+
+The prompt will return with:
+
++ tacit-helloworld@1.0.0
+
+Afterwards, you’ll be able to install your package directly by name rather than having to point at the Github url.
