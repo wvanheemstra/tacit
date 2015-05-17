@@ -104,6 +104,8 @@ Now a package.json file will have been written to /Users/wvanheemstra/Sites/taci
 
 ========= Creating a Module ==========
 
+(See official module documentation at https://nodejs.org/api/modules.html#modules_file_modules)
+
 Now we can actually get on to the business of writing code. Create an index.js file to hold the primary module code. It’ll look something like the following.
 
 Content of index.js:
