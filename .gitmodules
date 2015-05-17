@@ -1,3 +1,6 @@
 [submodule "tacit-helloworld"]
 	path = tacit-helloworld
 	url = git://github.com/wvanheemstra/tacit-helloworld.git
+[submodule "tacit-server"]
+	path = tacit-server
+	url = git://github.com/wvanheemstra/tacit-server.git
